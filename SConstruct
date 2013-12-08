@@ -1,5 +1,8 @@
 import os
 
+# TODO maybe this could be solved more elegantly
+# with build targets
+
 main_path = os.getcwd()
 Export('main_path')
 
