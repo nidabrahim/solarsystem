@@ -26,14 +26,8 @@ def compileSDL2Image():
 
 	os.chdir(cur_dir)
 
-#Execute(Command("lib/soil/lib/libSoil.a", "", "cd lib/soil/ && make"))
-#Execute("cd lib/soil/ && make")
-
 compileSDL2Image()
 
 SConscript('src/SConstruct', variant_dir='build', src='src', main_path='main_path', duplicate=0)
 
-Command('solarsystem', 'tools/solarsystem', [
-	Copy('$TARGET', '$SOURCE'),
-	Chmod('$TARGET', 0755)
-])
+Execute('chmod +x solarsystem')

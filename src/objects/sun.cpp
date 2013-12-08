@@ -19,25 +19,6 @@ Sun::Sun(SolarSystem *sys) :
 
 	initialiseVariables(shader->program);
 
-	float value = 16;
-	float value2 = 0.5;
-	for (GLuint i = 0; i < vertices->size(); i+=3) {
-		vec3 vertex(vertices->at(i), vertices->at(i + 1), vertices->at(i + 2));
-		//cout << vertices->at(i) << endl;
-
-		noised.push_back(glm::perlin(vec3(vertex.x / value, vertex.y / value, value2)));
-	}
-
-	glGenBuffers(1, &noise_buffer);
-	glBindBuffer(GL_ARRAY_BUFFER, noise_buffer);
-
-	glBufferData(
-			GL_ARRAY_BUFFER,
-			noised.size() * sizeof(GLfloat),
-			noised.data(),
-			GL_STATIC_DRAW
-	);
-
 	texture = create1DTexture("textures/sun/sun_colors.png");
 }
 
@@ -54,18 +35,6 @@ void Sun::draw(GLuint time) {
 
 	glUniformMatrix4fv(shader_vars.model_matrix, 1, GL_FALSE, &transformation[0][0]);
 	glUniform1ui(shader_vars.time, time);
-
-	glEnableVertexAttribArray(1);
-	glBindBuffer(GL_ARRAY_BUFFER, noise_buffer);
-
-	glVertexAttribPointer(
-			1,
-			1,
-			GL_FLOAT,
-			GL_FALSE,
-			0,
-			BUFFER_OFFSET(0)
-	);
 
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_1D, texture);
