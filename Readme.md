@@ -9,6 +9,7 @@ Fun project to explore various concept in OpenGL:
 * Skyboxes
 
 
+
 ## Dependencies
 
 * boost
@@ -17,7 +18,10 @@ Fun project to explore various concept in OpenGL:
 * GLU
 * GLEW
 * SDL2\_image (included)
-* Scons
+* [GLM](http://glm.g-truc.net/0.9.4/index.html)
+* Scons (for building)
+
+
 
 ## Building and usage
 
@@ -27,6 +31,7 @@ To build and run the project, run
 	./solarsystem
 
 With `space` the view can be changed.
+
 
 
 ## Thanks
