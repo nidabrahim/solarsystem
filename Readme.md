@@ -41,3 +41,8 @@ to create the cube map textures.
 
 I don't know where I have the textures from, if I violeted some copyright laws
 pls contact me.
+
+## Screenshots
+
+
+![](https://raw.github.com/schtibe/solarsystem/master/screenshots/overview.png)
