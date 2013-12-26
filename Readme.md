@@ -1,6 +1,9 @@
 
 # Solar System
 
+
+![](https://raw.github.com/schtibe/solarsystem/master/screenshots/overview.png)
+
 Fun project to explore various concept in OpenGL:
 
 * General shading/lightning in GLSL
@@ -8,7 +11,7 @@ Fun project to explore various concept in OpenGL:
 * Geometry shader
 * Skyboxes
 
-
+I put it here because somebody might want to learn stuff from this. 
 
 ## Dependencies
 
@@ -45,4 +48,5 @@ pls contact me.
 ## Screenshots
 
 
-![](https://raw.github.com/schtibe/solarsystem/master/screenshots/overview.png)
+![](https://raw.github.com/schtibe/solarsystem/master/screenshots/earth.png)
+![](https://raw.github.com/schtibe/solarsystem/master/screenshots/night.png)
